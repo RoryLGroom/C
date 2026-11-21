@@ -107,6 +107,12 @@ void singlemode()
         scanf("%d", &m);
 
         placex(m);
+		int x = checkwin;
+		if(x == -1)
+		{
+			printf("YOU WIN!\n");
+			return;
+		}
         if(table_fill_count<4)
         {
           place();
@@ -347,7 +353,7 @@ int checkwin()
             return -2;
         }
     }
-    else if (game_table[0] == game_table[4] && game_table[4] == game_table[8])
+    if (game_table[0] == game_table[4] && game_table[4] == game_table[8])
     {
         if (game_table[0] == 'x' && game_table[4] == 'x' &&
             game_table[8] == 'x')
@@ -361,7 +367,7 @@ int checkwin()
             return -2;
         }
     }
-    else if (game_table[0] == game_table[3] && game_table[3] == game_table[6])
+    if (game_table[0] == game_table[3] && game_table[3] == game_table[6])
     {
         if (game_table[0] == 'x' && game_table[3] == 'x' &&
             game_table[6] == 'x')
@@ -375,7 +381,7 @@ int checkwin()
             return -2;
         }
     }
-    else if (game_table[3] == game_table[4] && game_table[4] == game_table[5])
+    if (game_table[3] == game_table[4] && game_table[4] == game_table[5])
     {
         if (game_table[3] == 'x' && game_table[4] == 'x' &&
             game_table[5] == 'x')
@@ -389,7 +395,7 @@ int checkwin()
             return -2;
         }
     }
-    else if (game_table[6] == game_table[7] && game_table[7] == game_table[8])
+    if (game_table[6] == game_table[7] && game_table[7] == game_table[8])
     {
         if (game_table[6] == 'x' && game_table[7] == 'x' &&
             game_table[8] == 'x')
@@ -403,7 +409,7 @@ int checkwin()
             return -2;
         }
     }
-    else if (game_table[1] == game_table[4] && game_table[4] == game_table[7])
+    if (game_table[1] == game_table[4] && game_table[4] == game_table[7])
     {
         if (game_table[1] == 'x' && game_table[4] == 'x' &&
             game_table[7] == 'x')
@@ -417,7 +423,7 @@ int checkwin()
             return -2;
         }
     }
-    else if (game_table[2] == game_table[5] && game_table[5] == game_table[8])
+    if (game_table[2] == game_table[5] && game_table[5] == game_table[8])
     {
         if (game_table[2] == 'x' && game_table[5] == 'x' &&
             game_table[8] == 'x')
@@ -431,7 +437,7 @@ int checkwin()
             return -2;
         }
     }
-    else if (game_table[2] == game_table[4] && game_table[4] == game_table[6])
+    if (game_table[2] == game_table[4] && game_table[4] == game_table[6])
     {
         if (game_table[2] == 'x' && game_table[4] == 'x' &&
             game_table[6] == 'x')
